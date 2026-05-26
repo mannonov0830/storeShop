@@ -1,5 +1,5 @@
 .header {
-    border-bottom: 1px solid #E2E8F0;
+  border-bottom: 1px solid #e2e8f0;
   .navbar {
     display: flex;
     align-items: center;
@@ -46,27 +46,27 @@
           background-color: #f1f5f9;
         }
       }
-      button{
+      button {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
         padding: 10px 20px;
         border-radius: 8px;
-        border: 1px solid #E2E8F0;
+        border: 1px solid #e2e8f0;
         background-color: #fff;
         font-size: 15px;
         font-weight: 600;
-        font-family: "Inter",sans-serif;
+        font-family: "Inter", sans-serif;
         color: #020817;
         transition: all 0.3s;
         cursor: pointer;
-        &:hover{
-            background-color: #F1F5F9;
+        &:hover {
+          background-color: #f1f5f9;
         }
-        i{
-            padding: 0;
-            font-weight: 500;
+        i {
+          padding: 0;
+          font-weight: 500;
         }
       }
     }
