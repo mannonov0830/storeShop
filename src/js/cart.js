@@ -6,107 +6,125 @@ let Input = document.getElementById("input");
 let allProducts = [];
 
 fetch(BASE_URL)
-    .then(res => res.json())
-    .then(data => {
+  .then((res) => res.json())
+  .then((data) => {
 
-        allProducts = data;
+    allProducts = data;
 
-        showProducts(data);
+    showProducts(data);
 
-    });
-
-
+  });
 
 function showProducts(products) {
 
-    cartProducts.innerHTML = "";
+  cartProducts.innerHTML = "";
 
-    products.forEach(product => {
+  products.forEach((product) => {
 
-        const cart = document.createElement("div");
+    const cart = document.createElement("div");
 
-        const { image, title, price, description } = product;
+    const {
+      image,
+      title,
+      price,
+      description,
+      id
+    } = product;
 
-        cart.classList.add("cart");
+    cart.classList.add("cart");
 
-        cart.innerHTML = `
+    cart.innerHTML = `
 
-        <div class="cart">
+      <div class="cart">
 
-            <div class="images">
+        <div class="images">
 
-                <img src="${image}" alt="product image">
+          <img src="${image}" alt="product image">
 
-                    <div class="likeIcon">
-                        <i class="ri-heart-line"></i>
-                    </div>
+          <div class="likeIcon">
+            <i class="ri-heart-line"></i>
+          </div>
 
-                    <div class="eyeBnt">
-                        <i class="ri-eye-line"></i>
-                        <i class="ri-shopping-cart-line"></i>
-                    </div>
-
-            </div>
-
-            <div class="cartText">
-
-                <h1>
-                    ${title.length > 25
-                ? title.slice(0, 25) + "..."
-                : title}
-                </h1>
-
-                <p>
-                    ${description.length > 40
-                ? description.slice(0, 30) + "..."
-                : description}
-                </p>
-
-                <p class="textP">
-                    $${price}
-                </p>
-
-                <button>
-                    Add to Cart
-                </button>
-
-            </div>
+          <div class="eyeBnt">
+            <i class="ri-eye-line"></i>
+            <i class="ri-shopping-cart-line"></i>
+          </div>
 
         </div>
 
- `;
+        <div class="cartText">
 
-        cartProducts.appendChild(cart);
+          <h1>
+            ${title.length > 25
+              ? title.slice(0, 25) + "..."
+              : title}
+          </h1>
+
+          <p>
+            ${description.length > 40
+              ? description.slice(0, 30) + "..."
+              : description}
+          </p>
+
+          <p class="textP">
+            $${price}
+          </p>
+
+          <button>
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+    `;
+
+    /* 👁 EYE BUTTON */
+    let eyeBtn = cart.querySelector(".ri-eye-line");
+
+    eyeBtn.addEventListener("click", () => {
+
+      localStorage.setItem("productId", id);
+
+      window.location.href = "/src/html/spa.html";
 
     });
+
+    cartProducts.appendChild(cart);
+
+  });
 
 }
 
-
-
 Input.addEventListener("input", (e) => {
 
-    let value = e.target.value.toLowerCase();
+  let value = e.target.value.toLowerCase();
 
-    let filtered = allProducts.filter(product => {
+  let filtered = allProducts.filter((product) => {
 
-        return product.title
-            .toLowerCase()
-            .includes(value);
+    return product.title
+      .toLowerCase()
+      .includes(value);
 
-    });
-    if (filtered.length === 0) {
-        cartProducts.innerHTML = `
-        <div class="xato">
+  });
 
-           <h1>No product found</h1>
+  if (filtered.length === 0) {
 
-           <p>Try changing your search or filter criteria</p>
+    cartProducts.innerHTML = `
+      <div class="xato">
 
-        </div>
-        `;
-        return;
-    }
-    showProducts(filtered);
+        <h1>No product found</h1>
 
-}); 
+        <p>
+          Try changing your search or filter criteria
+        </p>
+
+      </div>
+    `;
+
+    return;
+  }
+
+  showProducts(filtered);
+
+});

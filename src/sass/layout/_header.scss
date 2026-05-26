@@ -72,3 +72,138 @@
     }
   }
 }
+
+/* Modal Asosi */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Orqa fonni yumshoq qoraytirish */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 1000;
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+        
+        .modal-content {
+            transform: scale(1);
+        }
+    }
+}
+
+/* Rasmdagi oq login kartasi */
+.modal-content {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px; /* Yumshoq burchaklar */
+    width: 100%;
+    max-width: 440px; /* Rasmdagi kenglikka mos */
+    position: relative;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04); /* Nozik soya */
+    border: 1px solid #eef2f6;
+    transform: scale(0.95);
+    transition: transform 0.25s ease;
+
+    .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        color: #94a3b8;
+        cursor: pointer;
+        &:hover { color: #334155; }
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 8px;
+    }
+
+    .modal-sub {
+        font-size: 14px;
+        color: #64748b; /* Kulrang matn */
+        margin-bottom: 28px;
+    }
+}
+
+/* Input bloklari */
+.modal-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Label va Input orasidagi masofa */
+    margin-bottom: 20px;
+
+    label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #0f172a;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #e2e8f0; /* Rasmdagi ingichka border */
+        border-radius: 6px;
+        font-size: 14px;
+        color: #334155;
+        outline: none;
+        background-color: #ffffff;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+        &::placeholder {
+            color: #94a3b8; /* Placeholder rangi */
+        }
+
+        &:focus {
+            border-color: #2563eb; /* Fokus bo'lgandagi ko'k rang */
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+    }
+}
+
+/* Moviy Login Tugmasi */
+.modal-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #2563eb; /* Rasmdagi yorqin ko'k rang */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    transition: background-color 0.15s ease;
+
+    &:hover {
+        background-color: #1d4ed8;
+    }
+}
+
+/* Pastki Register qismi */
+.register-text {
+    font-size: 14px;
+    color: #64748b;
+    text-align: center;
+
+    a {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
