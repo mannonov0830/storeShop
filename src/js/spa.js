@@ -17,7 +17,7 @@ fetch("https://fakestoreapi.com/products")
 
         app.innerHTML = `
 
-                    <h1 class="container" onclick="window.location.href='/src/index.html'"><i class="ri-arrow-left-long-line"></i> Back to products</h1>
+            <h1 class="container" onclick="window.location.href='/src/index.html'"><i class="ri-arrow-left-long-line"></i> Back to products</h1>
 
             <section class="spaFLEX container">
                 <div class="img">

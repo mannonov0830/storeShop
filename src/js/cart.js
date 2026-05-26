@@ -79,7 +79,7 @@ function showProducts(products) {
       </div>
     `;
 
-    /* 👁 EYE BUTTON */
+
     let eyeBtn = cart.querySelector(".ri-eye-line");
 
     eyeBtn.addEventListener("click", () => {
@@ -113,7 +113,7 @@ Input.addEventListener("input", (e) => {
     cartProducts.innerHTML = `
       <div class="xato">
 
-        <h1>No product found</h1>
+        <h6>No product found</h6>
 
         <p>
           Try changing your search or filter criteria
