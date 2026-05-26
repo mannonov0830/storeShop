@@ -1,3 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  background-color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+}
 
+.container {
+  max-width: 1340px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+.header {
+  border-bottom: 1px solid #E2E8F0;
+}
+.header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .navbar .logoText ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header .navbar .logoText ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  color: #020817;
+  border-bottom: 1px solid transparent;
+}
+.header .navbar .logoText ul li a:hover {
+  border-bottom: 1px solid #020817;
+}
+.header .navbar .logoText ul li:nth-child(1) a {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  color: #020817;
+  border-bottom: none;
+}
+.header .navbar .logoBtn {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.header .navbar .logoBtn i {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 17px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.header .navbar .logoBtn i:hover {
+  background-color: #f1f5f9;
+}
+.header .navbar .logoBtn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  color: #020817;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.header .navbar .logoBtn button:hover {
+  background-color: #F1F5F9;
+}
+.header .navbar .logoBtn button i {
+  padding: 0;
+  font-weight: 500;
+}
 
 /*# sourceMappingURL=style.css.map */
