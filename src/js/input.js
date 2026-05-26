@@ -8,3 +8,4 @@ input.addEventListener("focus", () => {
 input.addEventListener("blur", () => {
     form.style.border = "2px solid transparent";
 });
+
