@@ -176,6 +176,9 @@ ul li {
   margin-top: 10px;
 }
 
+.main {
+  margin-top: 60px;
+}
 .main .store h1 {
   margin-top: 15px;
   margin-bottom: 27px;
@@ -576,6 +579,11 @@ ul li {
 
 .header {
   border-bottom: 1px solid #e2e8f0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: #ffffff;
+  top: 0;
 }
 .header .navbar {
   display: flex;
@@ -761,6 +769,12 @@ ul li {
 }
 .register-text a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 370px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
