@@ -31,7 +31,7 @@ loginModal.addEventListener("click", (e) => {
 });
 
 modalLoginForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
 
     const userEmail = modalEmailInput.value.trim();
 
@@ -39,7 +39,7 @@ modalLoginForm.addEventListener("submit", (e) => {
     localStorage.setItem("userEmail", userEmail);
 
     alert(`Xush kelibsiz! ${userEmail} muvaffaqiyatli saqlandi.`);
-
+    
     modalLoginForm.reset();
     loginModal.classList.remove("active");
 
