@@ -10,23 +10,19 @@ input.addEventListener("blur", () => {
 });
 
 
-
 const openModalBtn = document.getElementById("openModalBtn");
 const loginModal = document.getElementById("loginModal");
 const closeModalBtn = document.getElementById("closeModalBtn");
 const modalLoginForm = document.getElementById("modalLoginForm");
 const modalEmailInput = document.getElementById("modalEmail");
 
-
 openModalBtn.addEventListener("click", () => {
     loginModal.classList.add("active");
 });
 
-
 closeModalBtn.addEventListener("click", () => {
     loginModal.classList.remove("active");
 });
-
 
 loginModal.addEventListener("click", (e) => {
     if (e.target === loginModal) {
@@ -35,7 +31,7 @@ loginModal.addEventListener("click", (e) => {
 });
 
 modalLoginForm.addEventListener("submit", (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const userEmail = modalEmailInput.value.trim();
 
@@ -43,7 +39,7 @@ modalLoginForm.addEventListener("submit", (e) => {
     localStorage.setItem("userEmail", userEmail);
 
     alert(`Xush kelibsiz! ${userEmail} muvaffaqiyatli saqlandi.`);
-    
+
     modalLoginForm.reset();
     loginModal.classList.remove("active");
 
