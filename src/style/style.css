@@ -489,6 +489,7 @@ ul li {
   font-family: "Inter", sans-serif;
   color: #000;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .footer .footerFlex .storeText p {
   font-size: 16px;

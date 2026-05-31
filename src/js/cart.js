@@ -47,7 +47,7 @@ function showProducts(products) {
 
           <div class="eyeBnt">
             <i class="ri-eye-line"></i>
-            <i class="ri-shopping-cart-line"></i>
+            <i class="ri-shopping-cart-line" onclick"window.location.href='../html/cart.html'"></i>
           </div>
 
         </div>
